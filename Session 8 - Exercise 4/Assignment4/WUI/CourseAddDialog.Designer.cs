@@ -24,27 +24,26 @@ namespace Assignment4 {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.ctrlCourseCodeEdit = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ctrlCourseSubjectEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ctrlOKButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlCourseCodeEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlCourseSubjectEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // ctrlCourseCodeEdit
             // 
-            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textEdit1.Location = new System.Drawing.Point(353, 107);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(125, 36);
-            this.textEdit1.TabIndex = 0;
-            this.textEdit1.TextChanged += new System.EventHandler(this.textEdit1_TextChanged_1);
+            this.ctrlCourseCodeEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ctrlCourseCodeEdit.Location = new System.Drawing.Point(353, 107);
+            this.ctrlCourseCodeEdit.Name = "ctrlCourseCodeEdit";
+            this.ctrlCourseCodeEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.ctrlCourseCodeEdit.Properties.Appearance.Options.UseFont = true;
+            this.ctrlCourseCodeEdit.Size = new System.Drawing.Size(125, 36);
+            this.ctrlCourseCodeEdit.TabIndex = 0;
             // 
             // label1
             // 
@@ -68,28 +67,28 @@ namespace Assignment4 {
             this.label2.TabIndex = 3;
             this.label2.Text = "Subject:";
             // 
-            // textEdit2
+            // ctrlCourseSubjectEdit
             // 
-            this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textEdit2.Location = new System.Drawing.Point(353, 159);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(125, 36);
-            this.textEdit2.TabIndex = 2;
-            this.textEdit2.TextChanged += new System.EventHandler(this.textEdit2_TextChanged);
+            this.ctrlCourseSubjectEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ctrlCourseSubjectEdit.Location = new System.Drawing.Point(353, 159);
+            this.ctrlCourseSubjectEdit.Name = "ctrlCourseSubjectEdit";
+            this.ctrlCourseSubjectEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.ctrlCourseSubjectEdit.Properties.Appearance.Options.UseFont = true;
+            this.ctrlCourseSubjectEdit.Size = new System.Drawing.Size(125, 36);
+            this.ctrlCourseSubjectEdit.TabIndex = 2;
+            this.ctrlCourseSubjectEdit.EditValueChanged += new System.EventHandler(this.ctrlCourseSubjectEdit_EditValueChanged);
             // 
-            // button1
+            // ctrlOKButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(397, 398);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 39);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ctrlOKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlOKButton.Location = new System.Drawing.Point(397, 398);
+            this.ctrlOKButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlOKButton.Name = "ctrlOKButton";
+            this.ctrlOKButton.Size = new System.Drawing.Size(191, 39);
+            this.ctrlOKButton.TabIndex = 13;
+            this.ctrlOKButton.Text = "OK";
+            this.ctrlOKButton.UseVisualStyleBackColor = true;
+            this.ctrlOKButton.Click += new System.EventHandler(this.ctrlOKButton_Click);
             // 
             // button2
             // 
@@ -101,7 +100,7 @@ namespace Assignment4 {
             this.button2.TabIndex = 12;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.ctrlCancelButton_Click);
             // 
             // label3
             // 
@@ -120,17 +119,17 @@ namespace Assignment4 {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ctrlOKButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.ctrlCourseSubjectEdit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.ctrlCourseCodeEdit);
             this.Name = "CourseAddDialog";
             this.Text = "CourseEditDialog";
             this.Load += new System.EventHandler(this.CourseAddDialog_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlCourseCodeEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlCourseSubjectEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,11 +137,11 @@ namespace Assignment4 {
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit ctrlCourseCodeEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.TextEdit ctrlCourseSubjectEdit;
+        private System.Windows.Forms.Button ctrlOKButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
     }

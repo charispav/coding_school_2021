@@ -14,7 +14,7 @@ namespace Assignment4 {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e) {
+        private void ctrlCancelButton_Click(object sender, EventArgs e) {
             this.Close();
         }
 
@@ -22,20 +22,21 @@ namespace Assignment4 {
 
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void ctrlAddCourseButton_Click(object sender, EventArgs e) {
             CourseAddDialog courseAddDialog = new CourseAddDialog();
             courseAddDialog.ShowDialog();
            
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void ctrlAddProfessorButton_Click(object sender, EventArgs e) {
             ProfessorAddDialog professorAddDialog = new ProfessorAddDialog();
             professorAddDialog.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e) {
+        private void ctrlAddStudentButton_Click(object sender, EventArgs e) {
             StudentAddDialog studentAddDialog = new StudentAddDialog();
             studentAddDialog.ShowDialog();
         }
+
     }
 }

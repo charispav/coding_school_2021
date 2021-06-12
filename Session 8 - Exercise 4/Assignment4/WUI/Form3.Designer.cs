@@ -31,13 +31,13 @@ namespace Assignment4 {
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ctrlExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ctrlButtonSecretariat = new System.Windows.Forms.RadioButton();
+            this.ctrlButtonProfessor = new System.Windows.Forms.RadioButton();
+            this.ctrlButtonStudent = new System.Windows.Forms.RadioButton();
+            this.ctrlOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.SuspendLayout();
@@ -92,17 +92,17 @@ namespace Assignment4 {
             this.barDockControlRight.Manager = this.toolbarFormManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 411);
             // 
-            // button2
+            // ctrlExit
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(496, 398);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 39);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ctrlExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlExit.Location = new System.Drawing.Point(496, 398);
+            this.ctrlExit.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlExit.Name = "ctrlExit";
+            this.ctrlExit.Size = new System.Drawing.Size(191, 39);
+            this.ctrlExit.TabIndex = 5;
+            this.ctrlExit.Text = "Exit";
+            this.ctrlExit.UseVisualStyleBackColor = true;
+            this.ctrlExit.Click += new System.EventHandler(this.ctrlExit_Click);
             // 
             // label1
             // 
@@ -127,72 +127,72 @@ namespace Assignment4 {
             this.label2.TabIndex = 7;
             this.label2.Text = "Welcome! Please select your role:";
             // 
-            // radioButton1
+            // ctrlButtonSecretariat
             // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.radioButton1.Location = new System.Drawing.Point(161, 179);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 25);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Secretariat";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton1_MouseClick);
+            this.ctrlButtonSecretariat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ctrlButtonSecretariat.AutoSize = true;
+            this.ctrlButtonSecretariat.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ctrlButtonSecretariat.Location = new System.Drawing.Point(161, 179);
+            this.ctrlButtonSecretariat.Name = "ctrlButtonSecretariat";
+            this.ctrlButtonSecretariat.Size = new System.Drawing.Size(112, 25);
+            this.ctrlButtonSecretariat.TabIndex = 8;
+            this.ctrlButtonSecretariat.TabStop = true;
+            this.ctrlButtonSecretariat.Text = "Secretariat";
+            this.ctrlButtonSecretariat.UseVisualStyleBackColor = true;
+            this.ctrlButtonSecretariat.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ctrlButtonSecretariat_MouseClick);
             // 
-            // radioButton2
+            // ctrlButtonProfessor
             // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(161, 221);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(100, 25);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Professor";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton2_MouseClick);
+            this.ctrlButtonProfessor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ctrlButtonProfessor.AutoSize = true;
+            this.ctrlButtonProfessor.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ctrlButtonProfessor.Location = new System.Drawing.Point(161, 221);
+            this.ctrlButtonProfessor.Name = "ctrlButtonProfessor";
+            this.ctrlButtonProfessor.Size = new System.Drawing.Size(100, 25);
+            this.ctrlButtonProfessor.TabIndex = 9;
+            this.ctrlButtonProfessor.TabStop = true;
+            this.ctrlButtonProfessor.Text = "Professor";
+            this.ctrlButtonProfessor.UseVisualStyleBackColor = true;
+            this.ctrlButtonProfessor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ctrlButtonProfessor_MouseClick);
             // 
-            // radioButton3
+            // ctrlButtonStudent
             // 
-            this.radioButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.radioButton3.Location = new System.Drawing.Point(161, 263);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(88, 25);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Student";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton3_MouseClick);
+            this.ctrlButtonStudent.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ctrlButtonStudent.AutoSize = true;
+            this.ctrlButtonStudent.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ctrlButtonStudent.Location = new System.Drawing.Point(161, 263);
+            this.ctrlButtonStudent.Name = "ctrlButtonStudent";
+            this.ctrlButtonStudent.Size = new System.Drawing.Size(88, 25);
+            this.ctrlButtonStudent.TabIndex = 10;
+            this.ctrlButtonStudent.TabStop = true;
+            this.ctrlButtonStudent.Text = "Student";
+            this.ctrlButtonStudent.UseVisualStyleBackColor = true;
+            this.ctrlButtonStudent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ctrlButtonStudent_MouseClick);
             // 
-            // button1
+            // ctrlOK
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(297, 398);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ctrlOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlOK.Location = new System.Drawing.Point(297, 398);
+            this.ctrlOK.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlOK.Name = "ctrlOK";
+            this.ctrlOK.Size = new System.Drawing.Size(191, 39);
+            this.ctrlOK.TabIndex = 11;
+            this.ctrlOK.Text = "OK";
+            this.ctrlOK.UseVisualStyleBackColor = true;
+            this.ctrlOK.Click += new System.EventHandler(this.ctrlOK_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.ctrlOK);
+            this.Controls.Add(this.ctrlButtonStudent);
+            this.Controls.Add(this.ctrlButtonProfessor);
+            this.Controls.Add(this.ctrlButtonSecretariat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ctrlExit);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -217,12 +217,12 @@ namespace Assignment4 {
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button ctrlExit;
+        private System.Windows.Forms.RadioButton ctrlButtonStudent;
+        private System.Windows.Forms.RadioButton ctrlButtonProfessor;
+        private System.Windows.Forms.RadioButton ctrlButtonSecretariat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ctrlOK;
     }
 }

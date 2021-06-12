@@ -40,10 +40,10 @@ namespace Assignment4 {
                 professor.GetName();
                 University university = new University();
                 university.AddProfessors(professor);
-                this.Close();
+                Close();
             }
             else {
-                this.Close();
+                Close();
             }
         }
     }
