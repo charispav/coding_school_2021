@@ -14,6 +14,8 @@ namespace WindowsFormsApp1.Impl {
         public int Hours { get; set; }
         public CoursesCategoryEnum Category { get; set; }
 
+        public string Code { get; set; }
+
         // CONSTRUCTOR
         public Course() 
             : base() {

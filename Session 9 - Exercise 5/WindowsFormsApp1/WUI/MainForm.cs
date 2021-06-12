@@ -19,7 +19,6 @@ namespace WindowsFormsApp1 {
         private const string _TxtFile = "UniversityData.txt";
         private const string _JsonFile = "UniversityData.json";
 
-        // ..
         University CodingSchool = new University(); 
 
         List<Student> Students = new List<Student>();
@@ -33,7 +32,6 @@ namespace WindowsFormsApp1 {
 
         private void MainForm_Load(object sender, EventArgs e) {
 
-            //MessageBox.Show("Hello World!");
         }
 
         private void ctrlAddStudent_Click(object sender, EventArgs e) {
@@ -43,120 +41,30 @@ namespace WindowsFormsApp1 {
 
             // refresh
             RefreshStudentList();
+            CodingSchool.Students = this.Students;
         }
 
         private void ctrlAddCourse_Click(object sender, EventArgs e) {
 
             //Add course using a form
             AddCourse();
-
+            CodingSchool.Courses = this.Courses;
         }
 
         private void ctrlAddProfessor_Click(object sender, EventArgs e) {
-
+            AddProfessor();
+            CodingSchool.Professors = this.Professors;
         }
         private void ctrlExit_Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
+        #region Txt Read/Write
         private void ctrlSave_Click(object sender, EventArgs e) {
 
             // Write ...
             WriteToTxt();
         }
-
-        private void ctrlLoad_Click(object sender, EventArgs e) {
-
-            // Read data
-            ReadFromTxt();
-
-            // refresh
-            RefreshStudentList();
-        }
-
-        private void AddStudent() {
-            Student student = new Student();
-            // TODO: 1. ΝΑ ΠΕΡΑΣΩ ΤΟ STUDENT ΟΒJECT ΣΤΗΝ ΦΟΡΜΑ!
-
-            // TODO: OPEN FORM ...
-            StudentForm form = new StudentForm();
-            form.NewStudent = student;
-
-            DialogResult result = form.ShowDialog();
-            switch (result) {
-                case DialogResult.OK:
-                    //Students.Add(student);
-                    CodingSchool.Students.Add(student);
-                    break;
-
-                default:
-                    MessageBox.Show("Students have not been added!");
-                    break;
-            }
-        }
-        private void AddCourse() {
-            Course course = new Course();
-            CourseForm courseForm = new CourseForm();
-            courseForm.NewCourse = course;
-
-            DialogResult result = courseForm.ShowDialog();
-            switch (result) {
-                case DialogResult.OK:
-                    Courses.Add(course);
-                    break;
-
-                default:
-                    MessageBox.Show("Courses have not been added!");
-                    break;
-            }
-        }
-        private void WriteToTxt() {
-            string path = Path.Combine(Environment.CurrentDirectory, _TxtFile);
-
-            string data = string.Empty;
-            foreach (Student item in Students) {
-
-                data += string.Format("{0};{1};{2};{3}", item.Name, item.Surname, item.RegistrationNumber, Environment.NewLine);
-            }
-
-
-            File.WriteAllText(path, data);
-        }
-
-
-        private void SerializeToJson() {
-
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-
-            // TODO: SERIALIZE UNIVERSITY OBJECT INSTEAD OF STUDENTS!
-            string data = serializer.Serialize(Students);
-
-            string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
-            File.WriteAllText(path, data);
-
-        }
-
-
-        private void DeserializeFromJson() {
-
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-
-            string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
-            string data = File.ReadAllText(path);
-
-            Students = serializer.Deserialize<List<Student>>(data);
-
-
-            //Course physics = new Course() {
-            //    Subject = "Physics",
-            //    Category = CoursesCategoryEnum.Physics,
-            //    Hours = 10
-            //};
-
-            //Students[0].Courses = new List<Course>();
-            //Students[0].Courses.Add(physics);
-        }
-
         private void ReadFromTxt() {
             string path = Path.Combine(Environment.CurrentDirectory, _TxtFile);
 
@@ -177,14 +85,115 @@ namespace WindowsFormsApp1 {
                     Student student = new Student();
 
                     student.Name = Convert.ToString(lineData[0]);
-                    student.Surname = Convert.ToString(lineData[1]);  
+                    student.Surname = Convert.ToString(lineData[1]);
                     student.RegistrationNumber = Convert.ToInt32(lineData[2]);
-                  
+
                     Students.Add(student);
 
                 }
             }
         }
+        private void ctrlLoad_Click(object sender, EventArgs e) {
+
+            // Read data
+            ReadFromTxt();
+
+            // refresh
+            RefreshStudentList();
+        }
+
+        private void WriteToTxt() {
+            string path = Path.Combine(Environment.CurrentDirectory, _TxtFile);
+
+            string data = string.Empty;
+            foreach (Student item in Students) {
+
+                data += string.Format("{0};{1};{2};{3}", item.Name, item.Surname, item.RegistrationNumber, Environment.NewLine);
+            }
+
+
+            File.WriteAllText(path, data);
+        }
+        #endregion
+
+        private void AddStudent() {
+            
+            Student student = new Student();
+            StudentForm form = new StudentForm();
+            form.NewStudent = student;
+            DialogResult result = form.ShowDialog();
+
+            switch (result) {
+                case DialogResult.OK:
+                    Students.Add(student);
+                    break;
+
+                default:
+                    MessageBox.Show("Student has not been added!");
+                    break;
+            }
+        }
+        private void AddCourse() {
+            Course course = new Course();
+            CourseForm courseForm = new CourseForm();
+            courseForm.NewCourse = course;
+            DialogResult result = courseForm.ShowDialog();
+            
+            switch (result) {
+                case DialogResult.OK:
+                    Courses.Add(course);
+                    break;
+
+                default:
+                    MessageBox.Show("Course has not been added!");
+                    break;
+            }
+        }
+
+        private void AddProfessor() {
+            
+            Professor professor = new Professor();
+            ProfessorForm professorForm = new ProfessorForm();
+            professorForm.NewProfessor = professor; 
+            DialogResult result = professorForm.ShowDialog();
+            
+            switch (result) {
+                case DialogResult.OK:
+                    Professors.Add(professor);
+                    break;
+
+                default:
+                    MessageBox.Show("Professor has not been added!");
+                    break;
+            }
+        }
+
+        private void SerializeToJson() {
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+
+            string data = serializer.Serialize(CodingSchool);
+
+            string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
+
+            File.WriteAllText(path, data);
+
+        }
+
+
+        private void DeserializeFromJson() {
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+
+            string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
+
+            string data = File.ReadAllText(path);
+
+            CodingSchool = serializer.Deserialize<University>(data);
+
+        }
+
+        
 
         private void RefreshStudentList() {
             ctrlStudentList.Items.Clear();
@@ -201,9 +210,8 @@ namespace WindowsFormsApp1 {
         private void ctrlDeserialize_Click(object sender, EventArgs e) {
             DeserializeFromJson();
 
-            RefreshStudentList();
+            //RefreshStudentList();
         }
-
 
     }
 }
