@@ -41,19 +41,19 @@ namespace WindowsFormsApp1 {
 
             // refresh
             RefreshStudentList();
-            CodingSchool.Students = Students;
+            
         }
 
         private void ctrlAddCourse_Click(object sender, EventArgs e) {
 
             //Add course using a form
             AddCourse();
-            CodingSchool.Courses = Courses;
+            
         }
 
         private void ctrlAddProfessor_Click(object sender, EventArgs e) {
             AddProfessor();
-            CodingSchool.Professors = Professors;
+            
         }
         private void ctrlExit_Click(object sender, EventArgs e) {
             Application.Exit();
@@ -126,6 +126,7 @@ namespace WindowsFormsApp1 {
             switch (result) {
                 case DialogResult.OK:
                     Students.Add(student);
+                    CodingSchool.Students = Students;
                     break;
 
                 default:
@@ -160,6 +161,7 @@ namespace WindowsFormsApp1 {
             switch (result) {
                 case DialogResult.OK:
                     Professors.Add(professor);
+                    CodingSchool.Professors = Professors;
                     break;
 
                 default:
