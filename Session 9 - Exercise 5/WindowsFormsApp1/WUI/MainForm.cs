@@ -41,19 +41,19 @@ namespace WindowsFormsApp1 {
 
             // refresh
             RefreshStudentList();
-            CodingSchool.Students = this.Students;
+            CodingSchool.Students = Students;
         }
 
         private void ctrlAddCourse_Click(object sender, EventArgs e) {
 
             //Add course using a form
             AddCourse();
-            CodingSchool.Courses = this.Courses;
+            CodingSchool.Courses = Courses;
         }
 
         private void ctrlAddProfessor_Click(object sender, EventArgs e) {
             AddProfessor();
-            CodingSchool.Professors = this.Professors;
+            CodingSchool.Professors = Professors;
         }
         private void ctrlExit_Click(object sender, EventArgs e) {
             Application.Exit();
