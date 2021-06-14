@@ -9,24 +9,19 @@ namespace WindowsFormsApp1.Impl {
 
     public class Person : Entity {
 
-        public string Name;
-       
+        //Properties
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public int Age { get; set; }
 
-        //Properties
-        public string Surname { get; set; }
-
+        //Constructor
         public Person(): base() {
 
         }
         public virtual string GetName() {
+
             return Name;
-
         }
 
-        public void SetName(string x) {
-            Name = x;
-
-        }
     }
 }

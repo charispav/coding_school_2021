@@ -28,34 +28,48 @@ namespace WindowsFormsApp1.WUI {
         private void MdiMainForm_Load(object sender, EventArgs e) {
 
         }
-        
 
-            // Insert (New) Entities:
+
+        // Insert (New) Entities:
         private void studentToolStripMenuItem_Click(object sender, EventArgs e) {
-            AddStudent();
+
+            AddStudent();  
         }
 
         private void professorToolStripMenuItem_Click(object sender, EventArgs e) {
+
             AddProfessor();
         }
 
         private void courseToolStripMenuItem_Click(object sender, EventArgs e) {
+
             AddCourse();
         }
 
 
-            // View Entities
+        // View Entities
         private void studentToolStripMenuItem2_Click(object sender, EventArgs e) {
-            
+
             ViewForm viewForm = new ViewForm();
             viewForm.MdiParent = this;
-
-
             viewForm.ViewData = GetStudentList();
+            viewForm.Show();
+        }
+        private void professorToolStripMenuItem2_Click(object sender, EventArgs e) {
 
+            ViewForm viewForm = new ViewForm();
+            viewForm.MdiParent = this;
+            viewForm.ViewData = GetProfessorList();
             viewForm.Show();
         }
 
+        private void courseToolStripMenuItem2_Click(object sender, EventArgs e) {
+
+            ViewForm viewForm = new ViewForm();
+            viewForm.MdiParent = this;
+            viewForm.ViewData = GetCoursesList();
+            viewForm.Show();
+        }
 
         private List<string> GetStudentList() {
 
@@ -63,7 +77,7 @@ namespace WindowsFormsApp1.WUI {
 
             try {
 
-                if (CodingSchool?.Students != null) { // != null && CodingSchool.Students != null) {
+                if (CodingSchool?.Students != null) {
 
 
                     foreach (Student item in CodingSchool.Students) {
@@ -79,15 +93,38 @@ namespace WindowsFormsApp1.WUI {
             catch (Exception ex) {
                 MessageBox.Show("Something wrong happened! Please send me the log file!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-                //MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 string path = Path.Combine(Environment.CurrentDirectory, _LogFile);
                 File.WriteAllText(path, ex.ToString());
             }
 
             return studentList;
         }
+        private List<string> GetProfessorList() {
+            List<string> professorlist = new List<string>();
 
+            try {
+
+                if (CodingSchool?.Professors != null) {
+
+                    foreach (Professor item in CodingSchool.Professors) {
+
+                        professorlist.Add(string.Format("Name={0} \t Surname={1} \t Rank={2}", item.Name, item.Surname, item.Rank));
+                    }
+                }
+                else {
+                    MessageBox.Show("No professor data exists!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show("Something wrong happened! Please send me the log file!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string path = Path.Combine(Environment.CurrentDirectory, _LogFile);
+                File.WriteAllText(path, ex.ToString());
+            }
+
+            return professorlist;
+        }
 
         private List<string> GetCoursesList() {
 
@@ -95,8 +132,7 @@ namespace WindowsFormsApp1.WUI {
 
             try {
 
-                if (CodingSchool?.Students != null) { // != null && CodingSchool.Students != null) {
-
+                if (CodingSchool?.Courses != null) {
 
                     foreach (Course item in CodingSchool.Courses) {
 
@@ -109,22 +145,13 @@ namespace WindowsFormsApp1.WUI {
 
             }
             catch (Exception ex) {
+
                 MessageBox.Show("Something wrong happened! Please send me the log file!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                //MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 string path = Path.Combine(Environment.CurrentDirectory, _LogFile);
                 File.WriteAllText(path, ex.ToString());
             }
 
             return coursesList;
-        }
-        private void professorToolStripMenuItem2_Click(object sender, EventArgs e) {
-
-        }
-
-        private void courseToolStripMenuItem2_Click(object sender, EventArgs e) {
-
         }
 
         private void AddStudent() {
@@ -195,7 +222,7 @@ namespace WindowsFormsApp1.WUI {
                 string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
 
                 if (File.Exists(path)) {
-                 
+
                     string data = File.ReadAllText(path);
                     CodingSchool = serializer.Deserialize<University>(data);
                 }
@@ -216,6 +243,7 @@ namespace WindowsFormsApp1.WUI {
             SerializeToJson();
         }
 
-
     }
 }
+
+

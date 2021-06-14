@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 namespace WindowsFormsApp1.Impl {
 
     public class Professor : Person {
+        
         //Properies
         public string Rank { get; set; }
         public List<Course> Courses { get; set; }
+
         //Constructor
         public Professor() : base() {
 
         }
+
         //Methods
         public void Teach(Course course, DateTime datetime) {
 

@@ -16,7 +16,9 @@ namespace WindowsFormsApp1.Impl {
         public List<Course> Courses { get; set; }
         public List<Grade> Grades { get; set; }
         public List<Schedule> ScheduledCourses { get; set; }
-        
+        public List<object> Tclass { get;  set; }
+
+
         // CONSTRUCTOR
         public University():base() {
            

@@ -13,15 +13,13 @@ using WindowsFormsApp1.Impl;
 namespace WindowsFormsApp1 {
 
     public partial class StudentForm : Form {
-
-        // PROPERTIES ????
+        // PROPERTIES 
         public Student NewStudent { get; set; }
 
         // CONSTRUCTOR
         public StudentForm() {
             InitializeComponent();
         }
-
 
         // METHODS
         private void StudentForm_Load(object sender, EventArgs e) {
@@ -33,7 +31,7 @@ namespace WindowsFormsApp1 {
 
                 // 1. MODIFY THE OBJECT STUDENT
                 NewStudent.Name = Convert.ToString(ctrlName.EditValue);
-
+                
                 NewStudent.Surname = Convert.ToString(ctrlSurname.EditValue);
 
                 // 2. CLOSE THE FORM!
