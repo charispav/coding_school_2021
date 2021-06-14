@@ -37,8 +37,9 @@ namespace WindowsFormsApp1 {
             // 
             // ctrlCancelButton
             // 
-            this.ctrlCancelButton.Location = new System.Drawing.Point(796, 501);
-            this.ctrlCancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlCancelButton.Location = new System.Drawing.Point(787, 484);
+            this.ctrlCancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlCancelButton.Name = "ctrlCancelButton";
             this.ctrlCancelButton.Size = new System.Drawing.Size(145, 39);
             this.ctrlCancelButton.TabIndex = 4;
@@ -48,8 +49,9 @@ namespace WindowsFormsApp1 {
             // 
             // ctrlOKButton
             // 
-            this.ctrlOKButton.Location = new System.Drawing.Point(643, 501);
-            this.ctrlOKButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlOKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlOKButton.Location = new System.Drawing.Point(634, 484);
+            this.ctrlOKButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlOKButton.Name = "ctrlOKButton";
             this.ctrlOKButton.Size = new System.Drawing.Size(145, 39);
             this.ctrlOKButton.TabIndex = 3;
@@ -61,7 +63,7 @@ namespace WindowsFormsApp1 {
             // 
             this.ctrlName.EditValue = "";
             this.ctrlName.Location = new System.Drawing.Point(137, 63);
-            this.ctrlName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlName.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlName.Name = "ctrlName";
             this.ctrlName.Size = new System.Drawing.Size(133, 22);
             this.ctrlName.TabIndex = 5;
@@ -70,7 +72,7 @@ namespace WindowsFormsApp1 {
             // ctrlSurname
             // 
             this.ctrlSurname.Location = new System.Drawing.Point(137, 95);
-            this.ctrlSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlSurname.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlSurname.Name = "ctrlSurname";
             this.ctrlSurname.Size = new System.Drawing.Size(133, 22);
             this.ctrlSurname.TabIndex = 6;
@@ -78,7 +80,7 @@ namespace WindowsFormsApp1 {
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(84, 66);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(42, 16);
             this.labelControl1.TabIndex = 7;
@@ -87,7 +89,7 @@ namespace WindowsFormsApp1 {
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(70, 98);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 16);
             this.labelControl2.TabIndex = 8;
@@ -98,7 +100,7 @@ namespace WindowsFormsApp1 {
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(64, 15);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(224, 31);
             this.labelControl3.TabIndex = 9;
@@ -108,7 +110,7 @@ namespace WindowsFormsApp1 {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 555);
+            this.ClientSize = new System.Drawing.Size(968, 548);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -116,7 +118,7 @@ namespace WindowsFormsApp1 {
             this.Controls.Add(this.ctrlName);
             this.Controls.Add(this.ctrlCancelButton);
             this.Controls.Add(this.ctrlOKButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);

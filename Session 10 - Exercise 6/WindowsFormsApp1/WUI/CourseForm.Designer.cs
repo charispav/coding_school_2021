@@ -67,6 +67,7 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlCancelButton
             // 
+            this.ctrlCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlCancelButton.Location = new System.Drawing.Point(642, 398);
             this.ctrlCancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlCancelButton.Name = "ctrlCancelButton";
@@ -78,6 +79,7 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlOKButton
             // 
+            this.ctrlOKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlOKButton.Location = new System.Drawing.Point(489, 398);
             this.ctrlOKButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlOKButton.Name = "ctrlOKButton";

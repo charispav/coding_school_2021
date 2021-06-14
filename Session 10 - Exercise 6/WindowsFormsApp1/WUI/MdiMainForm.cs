@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.WUI {
 
         //Properties
         private const string _JsonFile = "UniversityData.json";
+        private const string _LogFile = "Log.json";
         University CodingSchool = new University();
 
 
@@ -27,6 +28,105 @@ namespace WindowsFormsApp1.WUI {
         private void MdiMainForm_Load(object sender, EventArgs e) {
 
         }
+        
+
+            // Insert (New) Entities:
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e) {
+            AddStudent();
+        }
+
+        private void professorToolStripMenuItem_Click(object sender, EventArgs e) {
+            AddProfessor();
+        }
+
+        private void courseToolStripMenuItem_Click(object sender, EventArgs e) {
+            AddCourse();
+        }
+
+
+            // View Entities
+        private void studentToolStripMenuItem2_Click(object sender, EventArgs e) {
+            
+            ViewForm viewForm = new ViewForm();
+            viewForm.MdiParent = this;
+
+
+            viewForm.ViewData = GetStudentList();
+
+            viewForm.Show();
+        }
+
+
+        private List<string> GetStudentList() {
+
+            List<string> studentList = new List<string>();
+
+            try {
+
+                if (CodingSchool?.Students != null) { // != null && CodingSchool.Students != null) {
+
+
+                    foreach (Student item in CodingSchool.Students) {
+
+                        studentList.Add(string.Format("Name={0} \t Surname={1} \t RegistrationNumber={2}", item.Name, item.Surname, item.RegistrationNumber));
+                    }
+                }
+                else {
+                    MessageBox.Show("No student data exists!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Something wrong happened! Please send me the log file!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                //MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string path = Path.Combine(Environment.CurrentDirectory, _LogFile);
+                File.WriteAllText(path, ex.ToString());
+            }
+
+            return studentList;
+        }
+
+
+        private List<string> GetCoursesList() {
+
+            List<string> coursesList = new List<string>();
+
+            try {
+
+                if (CodingSchool?.Students != null) { // != null && CodingSchool.Students != null) {
+
+
+                    foreach (Course item in CodingSchool.Courses) {
+
+                        coursesList.Add(string.Format("Code={0} \t Subject={1} ", item.Code, item.Subject));
+                    }
+                }
+                else {
+                    MessageBox.Show("No course data exists!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Something wrong happened! Please send me the log file!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                //MessageBox.Show(ex.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string path = Path.Combine(Environment.CurrentDirectory, _LogFile);
+                File.WriteAllText(path, ex.ToString());
+            }
+
+            return coursesList;
+        }
+        private void professorToolStripMenuItem2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void courseToolStripMenuItem2_Click(object sender, EventArgs e) {
+
+        }
+
         private void AddStudent() {
 
             Student student = new Student();
@@ -95,8 +195,8 @@ namespace WindowsFormsApp1.WUI {
                 string path = Path.Combine(Environment.CurrentDirectory, _JsonFile);
 
                 if (File.Exists(path)) {
+                 
                     string data = File.ReadAllText(path);
-
                     CodingSchool = serializer.Deserialize<University>(data);
                 }
 
@@ -106,6 +206,14 @@ namespace WindowsFormsApp1.WUI {
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e) {
+            DeserializeFromJson();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+            SerializeToJson();
         }
 
 

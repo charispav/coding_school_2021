@@ -106,7 +106,8 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlCancelButton
             // 
-            this.ctrlCancelButton.Location = new System.Drawing.Point(642, 398);
+            this.ctrlCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlCancelButton.Location = new System.Drawing.Point(755, 425);
             this.ctrlCancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlCancelButton.Name = "ctrlCancelButton";
             this.ctrlCancelButton.Size = new System.Drawing.Size(145, 39);
@@ -117,7 +118,8 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlOKButton
             // 
-            this.ctrlOKButton.Location = new System.Drawing.Point(489, 398);
+            this.ctrlOKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlOKButton.Location = new System.Drawing.Point(602, 425);
             this.ctrlOKButton.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlOKButton.Name = "ctrlOKButton";
             this.ctrlOKButton.Size = new System.Drawing.Size(145, 39);
@@ -130,7 +132,7 @@ namespace WindowsFormsApp1.WUI {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(913, 477);
             this.Controls.Add(this.ctrlCancelButton);
             this.Controls.Add(this.ctrlOKButton);
             this.Controls.Add(this.labelControl4);

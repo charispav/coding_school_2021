@@ -75,18 +75,6 @@
     <Compile Include="WUI\CourseForm.Designer.cs">
       <DependentUpon>CourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WUI\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WUI\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WUI\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WUI\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WUI\MdiMainForm.cs">
@@ -108,14 +96,14 @@
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Impl\University.cs" />
+    <Compile Include="WUI\ViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WUI\ViewForm.Designer.cs">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="WUI\CourseForm.resx">
       <DependentUpon>CourseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WUI\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WUI\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WUI\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WUI\ViewForm.resx">
+      <DependentUpon>ViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

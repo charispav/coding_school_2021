@@ -51,9 +51,6 @@ namespace WindowsFormsApp1 {
         }
 
         private void ctrlCancelButton_Click(object sender, EventArgs e) {
-
-            // todo: CANCEL EVERYTHING -- DO NOT MODIFY THE OBJECT!
-            
             DialogResult = DialogResult.Cancel;
             Close();
         }
