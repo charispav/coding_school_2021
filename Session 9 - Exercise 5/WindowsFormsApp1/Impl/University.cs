@@ -14,13 +14,9 @@ namespace WindowsFormsApp1.Impl {
         public List<Student> Students { get; set; }
         public List<Professor> Professors { get; set; }
         public List<Course> Courses { get; set; }
-
-
         public List<Grade> Grades { get; set; }
         public List<Schedule> ScheduledCourses { get; set; }
         
-
-
         // CONSTRUCTOR
         public University():base() {
            
@@ -28,18 +24,6 @@ namespace WindowsFormsApp1.Impl {
 
         //  METHODS
 
-        public void AddStudents(Student student) {
-            Students.Add(student);
-        }
-        public void AddCourses(Course course) {
-            Courses.Add(course);
-        }
-        public void AddGrades(Grade grade) {
-            Grades.Add(grade);
-        }
-        public void AddProfessors(Professor professor) {
-            Professors.Add(professor);
-        }
         public Schedule SetSchedule(Guid courseID, Guid professorID, DateTime datetime) {
             Schedule schedule = new Schedule() {
                 CourseID = courseID,
@@ -48,23 +32,34 @@ namespace WindowsFormsApp1.Impl {
             };
             return schedule;
         }
-        public void SetCourse() { 
-        
-        }
-
-
-        public void AddScheduledCourse(Guid courseID, Guid professorID, DateTime callendar) {
+        public void AddScheduledCourse(Guid courseID, Guid professorID, DateTime calendar) {
 
             // Verb (Action) -> Object
 
             Schedule schedule = new Schedule() {
-                Calendar = callendar,
+                Calendar = calendar,
                 CourseID = courseID,
                 ProfessorID = professorID
                
             };
 
             ScheduledCourses.Add(schedule);
+        }
+        public List<Student> GetStudents() {
+
+            return Students;
+        }
+        public List<Course> GetCourses() {
+
+            return Courses;
+        }
+        public List<Professor> GetProfessors() {
+
+            return Professors;
+        }
+        public List<Grade> GetGrades() {
+
+            return Grades;
         }
 
         public void UpdateScheduledCourse(Guid scheduleID, DateTime calendar) {
@@ -95,13 +90,6 @@ namespace WindowsFormsApp1.Impl {
 
             schedule.Calendar = calendar;
 
-        }
-
-
-        public List<Schedule> GetScheduledCourses() {
-
-
-            return ScheduledCourses;
         }
 
     }
