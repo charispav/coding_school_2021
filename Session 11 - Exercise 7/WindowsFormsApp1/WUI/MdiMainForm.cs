@@ -39,7 +39,7 @@ namespace WindowsFormsApp1.WUI {
         }
 
         private void MdiMainForm_Load(object sender, EventArgs e) {
-            DeserializeFromJson();
+            
         }
 
         private void SerializeToJson() {
