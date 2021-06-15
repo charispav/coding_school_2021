@@ -165,19 +165,22 @@ namespace WindowsFormsApp1.WUI {
 
         }
         private void btnRefresh_Click(object sender, EventArgs e) {
+            RefreshForm();
+        }
 
+        private void RefreshForm() {
             ctrlViewList.Items.Clear();
             MdiMainForm form = new MdiMainForm();
             form.CodingSchool = MasterData;
             switch (Type) {
                 case EntityTypeEnum.Course:
-                    
+
                     ViewData = form.GetCoursesList();
                     ExportData();
                     break;
 
                 case EntityTypeEnum.Student:
-                    
+
                     ViewData = form.GetStudentList();
                     ExportData();
                     break;
@@ -191,6 +194,5 @@ namespace WindowsFormsApp1.WUI {
                     break;
             }
         }
-
     }
 }
