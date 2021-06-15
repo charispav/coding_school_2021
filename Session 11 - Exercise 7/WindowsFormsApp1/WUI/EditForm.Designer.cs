@@ -46,7 +46,7 @@ namespace WindowsFormsApp1.WUI {
             this.ctrlTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ctrlTitle.Appearance.Options.UseFont = true;
             this.ctrlTitle.Location = new System.Drawing.Point(46, 30);
-            this.ctrlTitle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ctrlTitle.Margin = new System.Windows.Forms.Padding(5);
             this.ctrlTitle.Name = "ctrlTitle";
             this.ctrlTitle.Size = new System.Drawing.Size(50, 31);
             this.ctrlTitle.TabIndex = 21;
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1.WUI {
             this.lblField2.Appearance.Options.UseTextOptions = true;
             this.lblField2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblField2.Location = new System.Drawing.Point(46, 115);
-            this.lblField2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lblField2.Margin = new System.Windows.Forms.Padding(5);
             this.lblField2.Name = "lblField2";
             this.lblField2.Size = new System.Drawing.Size(35, 16);
             this.lblField2.TabIndex = 20;
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.WUI {
             // lblField1
             // 
             this.lblField1.Location = new System.Drawing.Point(46, 82);
-            this.lblField1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lblField1.Margin = new System.Windows.Forms.Padding(5);
             this.lblField1.Name = "lblField1";
             this.lblField1.Size = new System.Drawing.Size(40, 16);
             this.lblField1.TabIndex = 19;
@@ -74,8 +74,8 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlEditField2
             // 
-            this.ctrlEditField2.Location = new System.Drawing.Point(115, 111);
-            this.ctrlEditField2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlEditField2.Location = new System.Drawing.Point(181, 112);
+            this.ctrlEditField2.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlEditField2.Name = "ctrlEditField2";
             this.ctrlEditField2.Size = new System.Drawing.Size(508, 22);
             this.ctrlEditField2.TabIndex = 18;
@@ -84,8 +84,8 @@ namespace WindowsFormsApp1.WUI {
             // ctrlEditField1
             // 
             this.ctrlEditField1.EditValue = "";
-            this.ctrlEditField1.Location = new System.Drawing.Point(115, 79);
-            this.ctrlEditField1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlEditField1.Location = new System.Drawing.Point(181, 80);
+            this.ctrlEditField1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlEditField1.Name = "ctrlEditField1";
             this.ctrlEditField1.Size = new System.Drawing.Size(508, 22);
             this.ctrlEditField1.TabIndex = 17;
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1.WUI {
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(709, 405);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(145, 39);
             this.btnCancel.TabIndex = 16;
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1.WUI {
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.Location = new System.Drawing.Point(556, 405);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(145, 39);
             this.btnOK.TabIndex = 15;
@@ -118,7 +118,7 @@ namespace WindowsFormsApp1.WUI {
             // lblField4
             // 
             this.lblField4.Location = new System.Drawing.Point(46, 180);
-            this.lblField4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lblField4.Margin = new System.Windows.Forms.Padding(5);
             this.lblField4.Name = "lblField4";
             this.lblField4.Size = new System.Drawing.Size(40, 16);
             this.lblField4.TabIndex = 25;
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1.WUI {
             // lblField3
             // 
             this.lblField3.Location = new System.Drawing.Point(46, 148);
-            this.lblField3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lblField3.Margin = new System.Windows.Forms.Padding(5);
             this.lblField3.Name = "lblField3";
             this.lblField3.Size = new System.Drawing.Size(40, 16);
             this.lblField3.TabIndex = 24;
@@ -135,8 +135,8 @@ namespace WindowsFormsApp1.WUI {
             // 
             // ctrlEditField4
             // 
-            this.ctrlEditField4.Location = new System.Drawing.Point(115, 176);
-            this.ctrlEditField4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlEditField4.Location = new System.Drawing.Point(181, 177);
+            this.ctrlEditField4.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlEditField4.Name = "ctrlEditField4";
             this.ctrlEditField4.Size = new System.Drawing.Size(508, 22);
             this.ctrlEditField4.TabIndex = 23;
@@ -145,8 +145,8 @@ namespace WindowsFormsApp1.WUI {
             // ctrlEditField3
             // 
             this.ctrlEditField3.EditValue = "";
-            this.ctrlEditField3.Location = new System.Drawing.Point(115, 144);
-            this.ctrlEditField3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlEditField3.Location = new System.Drawing.Point(181, 145);
+            this.ctrlEditField3.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlEditField3.Name = "ctrlEditField3";
             this.ctrlEditField3.Size = new System.Drawing.Size(508, 22);
             this.ctrlEditField3.TabIndex = 22;
@@ -168,7 +168,7 @@ namespace WindowsFormsApp1.WUI {
             this.Controls.Add(this.ctrlEditField1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditForm";
             this.Text = "EditForm";
             this.Load += new System.EventHandler(this.EditForm_Load);

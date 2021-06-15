@@ -8,7 +8,7 @@ namespace WindowsFormsApp1.Impl {
 
     public class Student : Person {
 
-        public int RegistrationNumber { get; set; }
+        public string RegistrationNumber { get; set; }
         public List<Course> Courses { get; set; }
 
         public Student() {

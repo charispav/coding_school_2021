@@ -171,7 +171,7 @@ namespace WindowsFormsApp1 {
 
                     student.Name = Convert.ToString(lineData[0]);
                     student.Surname = Convert.ToString(lineData[1]);  
-                    student.RegistrationNumber = Convert.ToInt32(lineData[2]);
+                    student.RegistrationNumber = Convert.ToString(lineData[2]);
 
                     CodingSchool.Students.Add(student);
 

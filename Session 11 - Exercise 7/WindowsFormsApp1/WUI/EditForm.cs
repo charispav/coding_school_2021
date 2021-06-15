@@ -52,8 +52,7 @@ namespace WindowsFormsApp1.WUI {
                     ctrlTitle.Text = "Add New Student...";
                     PersonFieldsEdit();
 
-                    lblField3.Visible = false;
-                    ctrlEditField3.Visible = false;
+                    lblField3.Text = "Registration number:";
 
                     lblField4.Visible = false;
                     ctrlEditField4.Visible = false;
@@ -63,6 +62,7 @@ namespace WindowsFormsApp1.WUI {
 
                     ctrlEditField1.EditValue = student.Name;
                     ctrlEditField2.EditValue = student.Surname;
+                    ctrlEditField3.EditValue = student.RegistrationNumber;
 
                     break;
 
@@ -126,6 +126,7 @@ namespace WindowsFormsApp1.WUI {
                             Student student = EditObject as Student;
                             student.Name = Convert.ToString(ctrlEditField1.EditValue);
                             student.Surname = Convert.ToString(ctrlEditField2.EditValue);
+                            student.RegistrationNumber = Convert.ToString(ctrlEditField3.EditValue);
 
                             DialogResult = DialogResult.OK;
                         }
