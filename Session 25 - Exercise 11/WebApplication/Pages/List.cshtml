@@ -1,0 +1,38 @@
+﻿@page
+@model WebApplication.Pages.ListModel
+@{ }
+
+<a href="/Edit/0">Add New Customer</a>
+
+<table id="t01">
+    <thead>
+        <tr ">
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                AFM
+            </th>
+            <th>
+                Active
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items) {
+<tr>
+    <td>@item.ID</td>
+    <td>@item.Name</td>
+    <td>@item.Surname</td>
+    <td>@item.AFM</td>
+    <td>@item.Active</td>
+    <td><a href="Edit/@item.ID">Edit</a></td>
+</tr>}
+    </tbody>
+</table>

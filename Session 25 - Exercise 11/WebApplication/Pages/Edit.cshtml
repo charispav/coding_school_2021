@@ -1,0 +1,38 @@
+﻿@page "{id}"
+@model EditModel
+@{ }
+
+
+<div>
+    <form id="frmMain" method="post">
+        <input id="txtSelectedId" type="hidden" value="@Model.SelectedListItem.ID">
+        <table id="t02">
+            <tr>
+                <td><label for="txtName">Name:</label></td>
+                <td><input id="txtName" name="name" value="@Model.SelectedListItem.Name"></td>
+            </tr>
+            <tr>
+                <td><label for="txtSurname">Surname:</label></td>
+                <td><input id="txtSurname" name="surname" value="@Model.SelectedListItem.Surname"></td>
+            </tr>
+            <tr>
+                <td><label for="txtAFM">AFM:</label></td>
+                <td><input id="txtAFM" name="afm" value="@Model.SelectedListItem.AFM"></td>
+            </tr>
+            <tr>
+                <td><label for="txtActive">Active:</label></td>
+                <td><input id="txtActive" name="active" value="@Model.SelectedListItem.Active"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="display: flex">
+                        <button id="btnSave" class="btn btn-success" type="submit">Save</button>
+                        <button id="btnCancel" class="btn btn-warning" asp-page-handler="cancel">Cancel</button>
+                        @if (Model.SelectedListItem.ID > 0) {
+                    <button id="btnDelete" class="btn btn-danger" asp-page-handler="delete">Delete</button>}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
